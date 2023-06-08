@@ -11,7 +11,7 @@ def api_vote_count(data):
             database="postgres",
             user="postgres",
             password="postgres",
-            port="5432"
+            port="5433"
         )
         db_connection.autocommit = True
         cursor = db_connection.cursor()
