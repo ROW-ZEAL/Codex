@@ -27,7 +27,7 @@
             <div class="container">
                 <a class="navbar-brand" href="index.html">
                     <div class='logo'>
-                        <a href=""><img src="./img/IIMS-NEW-SIDE-DESIGN-LOGO-WITH-TAG-LINE-1.png" width="100"></a>
+                        <a href=""><img src="./img/viber_image_2023-07-04_19-54-10-815.jpg" width="100"></a>
                     </div>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -38,10 +38,10 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav m-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="/">Home</a>
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/">About</a>
+                            <a class="nav-link" href="#">About</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Gallery</a>
@@ -278,7 +278,6 @@
             </div>
         </section>
 
-
         <section class="se_box">
             <div class="container mb-5">
                 <section class="mb-4">
@@ -286,9 +285,10 @@
                     <p class="text-center w-responsive mx-auto mb-5">Please fill out the form below to submit something.
                     </p>
 
-                    <div class="sumbit_box">
+                    <div class="submit_box">
                         <div class="col-md-6 mb-md-0 mb-5">
-                            <form id="submission-form" name="submission-form" action="process.php" method="POST">
+                            <form id="submission-form" name="submission-form" action="next_page.html" method="GET"
+                                enctype="multipart/form-data">
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="md-form mb-0">
@@ -306,8 +306,26 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="md-form mb-0">
+                                            <label for="photo">Upload Photo</label>
+                                            <input type="file" id="photo" name="photo" class="form-control-file">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="md-form mb-0">
+                                            <label for="video">Upload Video</label>
+                                            <input type="file" id="video" name="video" class="form-control-file">
+
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="text-center text-md-left">
-                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                    <button type="submit" class="btn btn-primary">Post</button>
                                 </div>
                                 <div class="status"></div>
                             </form>
@@ -320,86 +338,51 @@
 
 
 
+
+
+
+
+
+
+
         <footer class="text-center text-lg-start bg-secondary py-3 text-white">
             <section class="">
                 <div class="container text-center text-md-start mt-5">
-                    <div class="row mt-3">
-                        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                            <h6 class="text-uppercase fw-bold mb-4">
-                                <i class="bi bi-gem me-3"></i>College name
-                            </h6>
-                            <p>
-                                Here you can use rows and columns to organize your footer content. Lorem ipsum
-                                dolor sit amet, consectetur adipisicing elit.
-                            </p>
+                    <section id="topbar"
+                        class="mb-2 mb-lg-0 mb-sm-0 d-none d-lg-flex align-items-center pt-2 pb-2 bbg-lights text-white topbar-transparent">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-6   text-start">
+                                    <span class="px-3"><i class="bi bi-phone "></i> 555555555555 </span>
+                                    <i class="bi bi-clock"></i> sun-Sat: 11:00 AM - 3:00 PM
+                                </div>
+                                <div class="col-md-6 text-end">
+                                    <a href="" class="me-4 text-reset">
+                                        <i class="bi bi-facebook"></i>
+                                    </a>
+                                    <a href="" class="me-4 text-reset">
+                                        <i class="bi bi-twitter"></i>
+                                    </a>
+                                    <a href="" class="me-4 text-reset">
+                                        <i class="bi bi-google"></i>
+                                    </a>
+                                    <a href="" class="me-4 text-reset">
+                                        <i class="bi bi-instagram"></i>
+                                    </a>
+                                    <a href="" class="me-4 text-reset">
+                                        <i class="bi bi-linkedin"></i>
+                                    </a>
+                                    <a href="" class="me-4 text-reset">
+                                        <i class="bi bi-github"></i>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-                            <h6 class="text-uppercase fw-bold mb-4">
-                                Products
-                            </h6>
-                            <p>
-                                <a href="#!" class="text-reset">Angular</a>
-                            </p>
-                            <p>
-                                <a href="#!" class="text-reset">React</a>
-                            </p>
-                            <p>
-                                <a href="#!" class="text-reset">Vue</a>
-                            </p>
-                            <p>
-                                <a href="#!" class="text-reset">Laravel</a>
-                            </p>
-                        </div>
-                        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                            <h6 class="text-uppercase fw-bold mb-4">
-                                Contact
-                            </h6>
-                            <p><i class="bi bi-location me-3"></i> Putalisadak, Nepal</p>
-                            <p>
-                                <i class="bi bi-envelope me-3"></i>
-                                iims@example.com
-                            </p>
-                            <p><i class="bi bi-phone me-3"></i> 123 456 789</p>
-                            <p><i class="bi bi-print me-3"></i> 123 456 789</p>
-                        </div>
+                    </section>
+                    <div class="text-center py-4" style="background-color: rgba(0, 0, 0, 0.05);">
+                        © 2023 Copyright:
+                        <a class="text-reset fw-bold" href="">DIGNIFLOW</a>
                     </div>
-                </div>
-            </section>
-            <section id="topbar"
-                class="mb-2 mb-lg-0 mb-sm-0 d-none d-lg-flex align-items-center pt-2 pb-2 bbg-lights text-white topbar-transparent">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-6   text-start">
-                            <span class="px-3"><i class="bi bi-phone "></i> 555555555555 </span>
-                            <i class="bi bi-clock"></i> sun-Sat: 11:00 AM - 3:00 PM
-                        </div>
-                        <div class="col-md-6 text-end">
-                            <a href="" class="me-4 text-reset">
-                                <i class="bi bi-facebook"></i>
-                            </a>
-                            <a href="" class="me-4 text-reset">
-                                <i class="bi bi-twitter"></i>
-                            </a>
-                            <a href="" class="me-4 text-reset">
-                                <i class="bi bi-google"></i>
-                            </a>
-                            <a href="" class="me-4 text-reset">
-                                <i class="bi bi-instagram"></i>
-                            </a>
-                            <a href="" class="me-4 text-reset">
-                                <i class="bi bi-linkedin"></i>
-                            </a>
-                            <a href="" class="me-4 text-reset">
-                                <i class="bi bi-github"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <div class="text-center py-4" style="background-color: rgba(0, 0, 0, 0.05);">
-                © 2023 Copyright:
-                <a class="text-reset fw-bold" href="">iims</a>
-            </div>
         </footer>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
