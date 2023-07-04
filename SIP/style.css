@@ -383,3 +383,9 @@ header nav ul.action-menu .nav-item .nav-link {
 .row-container p:last-child {
   margin-right: 0;
 }
+.sumbit_box {
+  margin-left: 350px;
+}
+.se_box {
+  background-color: #e0e0e0;
+}
