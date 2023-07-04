@@ -3,7 +3,7 @@ import psycopg2
 
 def api_vote_count(data):
     candidates_id = data.get('candidates_id')
-    Votes = data.get('user_stock_status')
+    Votes = data.get('voting_status')
 
     try:
         db_connection = psycopg2.connect(
@@ -15,10 +15,10 @@ def api_vote_count(data):
         )
         db_connection.autocommit = True
         cursor = db_connection.cursor()
-        stock_insert_query = """ INSERT into vote_count (candidates_name,Votes)  VALUES(%s, %s);
+        vote_counting_query = """ INSERT into vote_count (candidates_name,Votes)  VALUES(%s, %s);
                                     """
 
-        cursor.execute(stock_insert_query,
+        cursor.execute(vote_counting_query,
                            ( candidates_id,Votes))
 
         db_connection.commit
