@@ -8,8 +8,8 @@ pipeline {
             steps {
                 echo 'Building the application'
                 sh "curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash"
-                sh "source ~/.nvm/nvm.sh && nvm install $NODE_VERSION"
-                sh "source ~/.nvm/nvm.sh && nvm use $NODE_VERSION"
+                sh "export NVM_DIR=\"$HOME/.nvm\" && [ -s \"$NVM_DIR/nvm.sh\" ] && \\. \"$NVM_DIR/nvm.sh\" && nvm install $NODE_VERSION"
+                sh "export NVM_DIR=\"$HOME/.nvm\" && [ -s \"$NVM_DIR/nvm.sh\" ] && \\. \"$NVM_DIR/nvm.sh\" && nvm use $NODE_VERSION"
                 sh "npm install"
             }
         }
