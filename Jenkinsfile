@@ -9,21 +9,19 @@ pipeline {
             steps {
                 echo 'Building the application'
                 sh "curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash"
-                sh "export NVM_DIR=\"$NVM_DIR\" && [ -s \"$NVM_DIR/nvm.sh\" ] && \\. \"$NVM_DIR/nvm.sh\" && nvm install $NODE_VERSION"
-                sh "export NVM_DIR=\"$NVM_DIR\" && [ -s \"$NVM_DIR/nvm.sh\" ] && \\. \"$NVM_DIR/nvm.sh\" && nvm use $NODE_VERSION"
-                sh "npm install"
+                sh "source $NVM_DIR/nvm.sh && nvm install $NODE_VERSION && nvm use $NODE_VERSION && npm install"
             }
         }
         stage("test") {
             steps {
                 echo 'Testing the application'
-                sh "npm test"
+                sh "source $NVM_DIR/nvm.sh && npm test"
             }
         }
         stage("deploy") {
             steps {
                 echo 'Deploying the application'
-                sh "npm run deploy"
+                sh "source $NVM_DIR/nvm.sh && npm run deploy"
             }
         }
     }
