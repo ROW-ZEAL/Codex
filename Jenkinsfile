@@ -1,5 +1,10 @@
 pipeline {
     agent any
+
+    environment {
+        PATH = "${tool name: 'NodeJS', type: 'jenkins.plugins.nodejs.tools.NodeJSInstallation'}/bin:${PATH}"
+    }
+
     stages {
         stage("build") {
             steps {
