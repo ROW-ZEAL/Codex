@@ -20,7 +20,7 @@ pipeline {
             steps {
                 script {
                     def num1 = 5
-                    def num2 = 7
+                    def num2 =5
                     def sum = num1 + num2
                     echo "The sum of ${num1} and ${num2} is ${sum}"
                 }
